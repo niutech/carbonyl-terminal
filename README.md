@@ -1,8 +1,10 @@
 # [Carbonyl Browser](https://github.com/fathyb/carbonyl) ❤️ [Windows Terminal](https://github.com/microsoft/terminal)
 
+![Carbonyl Terminal](https://github.com/niutech/carbonyl-terminal/assets/384997/88bb7289-1d34-4664-b574-5f1707549fba)
+
 Carbonyl Terminal is the portable Windows Terminal distribution preconfigured to use Carbonyl browser in the Docker container in the cloud, to accelerate web browsing on slow networks.
 
-Windows Terminal ⟵ssh/mosh⟶ Carbonyl Docker container ⟵https⟶ Internet
+**Windows Terminal** ⟵ssh/mosh⟶ **Carbonyl Docker container** ⟵https⟶ **Internet**
 
 Carbonyl Terminal uses [mosh](https://mosh.org/) for better responsiveness, with SSH as a fallback.
 
@@ -23,7 +25,7 @@ The server with Carbonyl Terminal Docker container must have open TCP port 2222 
 
 ### Usage
 
-On your Windows client: download the latest release of Carbonyl Terminal, extract it and modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.bat`. Then run `WindowsTerminal.exe`, which automatically connects to your Carbonyl instance by running `carbonyl.bat` on startup.
+On your Windows client: [download](https://github.com/niutech/carbonyl-terminal/releases) the latest release of Carbonyl Terminal, extract it and modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.bat`. Then run `WindowsTerminal.exe`, which automatically connects to your Carbonyl instance by running `carbonyl.bat` on startup.
 
 On your Linux or MacOS client: download the `carbonyl.sh` and `carbonyl_rsa` file from the repo, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.sh`, copy the `carbonyl_rsa` key to `~/.ssh/`, set its permissions to `600` and run `carbonyl.sh` in your terminal emulator of choice.
 
