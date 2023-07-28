@@ -25,9 +25,9 @@ The server with Carbonyl Terminal Docker container must have open TCP port 2222 
 
 ### Usage
 
-On your Windows client: [download](https://github.com/niutech/carbonyl-terminal/releases) the latest release of Carbonyl Terminal, extract it and modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.bat`. Then run `WindowsTerminal.exe`, which automatically connects to your Carbonyl instance by running `carbonyl.bat` on startup.
+On your Windows client: [download](https://github.com/niutech/carbonyl-terminal/releases) the latest release of Carbonyl Terminal, extract it and modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.bat` or leave it as is to use the demo server. Then run `WindowsTerminal.exe`, which automatically connects to your Carbonyl instance by running `carbonyl.bat` on startup.
 
-On your Linux or MacOS client: download the `carbonyl.sh` and `carbonyl_rsa` file from the repo, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.sh`, copy the `carbonyl_rsa` key to `~/.ssh/`, set its permissions to `600` and run `carbonyl.sh` in your terminal emulator of choice.
+On your Linux or MacOS client: download the `carbonyl.sh` and `carbonyl_rsa` file from the repo, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.sh` or leave it as is to use the demo server, copy the `carbonyl_rsa` key to `~/.ssh/`, set its permissions to `600` and run `carbonyl.sh` in your terminal emulator of choice.
 
 If you want to use mosh, you have to first install it using WSL (on Windows) or Bash (on Linux/MacOS), copy the `carbonyl_rsa` auth key to `~/.ssh/` and set the appropriate permissions:
 
