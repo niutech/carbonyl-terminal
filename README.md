@@ -1,6 +1,6 @@
 # [Carbonyl Browser](https://github.com/fathyb/carbonyl) ❤️ [Windows Terminal](https://github.com/microsoft/terminal) / [QTerminal](https://github.com/lxqt/qterminal)
 
-![Carbonyl Terminal](https://github.com/niutech/carbonyl-terminal/assets/384997/88bb7289-1d34-4664-b574-5f1707549fba)
+![Carbonyl Terminal on Windows](https://github.com/niutech/carbonyl-terminal/assets/384997/88bb7289-1d34-4664-b574-5f1707549fba)
 
 Carbonyl Terminal is the portable Windows Terminal distribution preconfigured to use Carbonyl browser in the Docker container in the cloud, to accelerate web browsing on slow networks.
 
@@ -12,7 +12,7 @@ Carbonyl Terminal Docker Container bundles Carbonyl browser, mosh and SSH server
 
 You can install Carbonyl Terminal Docker Conatiner on your VPS in the cloud or use the preconfigured demo server (only for testing).
 
-### Installation
+## Installation
 
 First, run Carbonyl Terminal Docker Container on your cloud VPS, e.g. yourserver.com:
 
@@ -43,6 +43,8 @@ cp settings/qterminal.ini ~/.config/qterminal.org/
 SHELL=./carbonyl.sh qterminal
 ```
 
+![Carbonyl QTerminal on Linux](https://github.com/niutech/carbonyl-terminal/assets/384997/0b7ffdd0-507f-4d94-af77-350a515c3f14)
+
 If you want to use mosh, you have to first install it using WSL (on Windows), APT (on Ubuntu/Debian) or Macports (on MacOS). Don't forget to copy the `carbonyl_rsa` auth key to `~/.ssh/` and set the appropriate permissions:
 
 ```
@@ -50,6 +52,6 @@ sudo apt install mosh  # MacOS: sudo port install mosh
 cp carbonyl_rsa ~/.ssh/ && chmod 600 ~/.ssh/carbonyl_rsa
 ```
 
-### License
+## License
 
 © 2023 Jerzy Głowacki under MIT License.
