@@ -2,7 +2,7 @@
 
 ![Carbonyl Terminal on Windows](https://github.com/niutech/carbonyl-terminal/assets/384997/88bb7289-1d34-4664-b574-5f1707549fba)
 
-Carbonyl Terminal is the portable [Windows Terminal](https://github.com/microsoft/terminal) distribution preconfigured to use Carbonyl browser in the Docker container in the cloud, to accelerate web browsing on slow networks.
+Carbonyl Terminal is the portable [Windows Terminal](https://github.com/microsoft/terminal) / [QTerminal](https://github.com/lxqt/qterminal) distribution preconfigured to use Carbonyl browser in the Docker container in the cloud in order to accelerate web browsing on a slow network connection.
 
 **Carbonyl Terminal** ⟵ssh/mosh⟶ **Carbonyl Terminal Docker Container** ⟵https⟶ **Internet**
 
@@ -27,16 +27,17 @@ The server with Carbonyl Terminal Docker Container must have open TCP port 2222 
 
 **On your Windows client:** [download](https://github.com/niutech/carbonyl-terminal/releases) the latest release of Carbonyl Terminal, extract it and modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.bat` or leave it as is to use the demo server. Then run `CarbonylTerminal.exe`, which automatically connects to your Carbonyl instance by running `carbonyl.bat` in the new tab.
 
-**On your Linux or MacOS client:** clone the repo to `~/carbonyl-terminal/`, go to `~/carbonyl-terminal/linux/` directory, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.sh` or leave it as is to use the demo server. Then run `./install.sh` to install a preconfigured [QTerminal](https://github.com/lxqt/qterminal) app using APT (Ubuntu/Debian), Zypper (OpenSUSE), DNF (Fedora/Red Hat), Pacman (Arch Linux) or Macports (MacOS) to automatically connect to Carbonyl instance in the new tab. After installation, there should be the`~/.local/share/applications/carbonyl-terminal.desktop` file which adds the Carbonyl Terminal shortcut to the main menu.
+If you want to use mosh on Windows, you have to first install it in [WSL](https://learn.microsoft.com/en-us/windows/wsl/). Don't forget to copy the `carbonyl_rsa` auth key to `~/.ssh/` and set the appropriate permissions:
+
+```
+sudo apt install mosh
+cp carbonyl_rsa ~/.ssh/ && chmod 600 ~/.ssh/carbonyl_rsa
+```
+
+**On your Linux or MacOS client:** clone the repo to `~/carbonyl-terminal/`, go to `~/carbonyl-terminal/linux/` directory, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.sh` or leave it as is to use the demo server. Then run `./install.sh` to install qterminal and mosh packages using APT (Ubuntu/Debian), Zypper (OpenSUSE), DNF (Fedora/Red Hat), Pacman (Arch Linux) or Macports (MacOS) and configure them to automatically connect to Carbonyl instance in the new tab. After installation, there should be the`~/.local/share/applications/carbonyl-terminal.desktop` file which adds the Carbonyl Terminal shortcut to the main menu in your desktop environment.
 
 ![Carbonyl QTerminal on Linux](https://github.com/niutech/carbonyl-terminal/assets/384997/0b7ffdd0-507f-4d94-af77-350a515c3f14)
 
-If you want to use mosh, you have to first install it using WSL (on Windows), APT (on Ubuntu/Debian) or Macports (on MacOS). Don't forget to copy the `carbonyl_rsa` auth key to `~/.ssh/` and set the appropriate permissions:
-
-```
-sudo apt install mosh  # MacOS: sudo port install mosh
-cp carbonyl_rsa ~/.ssh/ && chmod 600 ~/.ssh/carbonyl_rsa
-```
 
 ## License
 
