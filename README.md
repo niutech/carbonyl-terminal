@@ -44,7 +44,7 @@ cp carbonyl_rsa ~/.ssh/ && chmod 600 ~/.ssh/carbonyl_rsa
 
 Clone the repo to `~/carbonyl-terminal/`, go to `~/carbonyl-terminal/linux/` directory, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.sh` or leave it as is to use the demo server. Then run `carbonyl.sh` in your favorite terminal emulator.
 
-![Carbonyl QTerminal on Linux](https://github.com/niutech/carbonyl-terminal/assets/384997/0b7ffdd0-507f-4d94-af77-350a515c3f14)
+![Carbonyl Terminal on Linux](https://github.com/niutech/carbonyl-terminal/assets/384997/034826e7-81bc-4a22-b1cb-c142239f2c55)
 
 
 ## License
