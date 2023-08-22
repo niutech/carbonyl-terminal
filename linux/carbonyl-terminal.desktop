@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Carbonyl Terminal
-Comment=Carbonyl web browser client based on QTerminal
-Type=Application
-Icon=carbonyl
-Exec=sh -c "SHELL=~/carbonyl-terminal/linux/carbonyl.sh qterminal"
-Terminal=false
-Categories=Network;WebBrowser;
