@@ -1,14 +1,14 @@
-# [Carbonyl Browser](https://github.com/fathyb/carbonyl) ❤️ Windows/Linux/MacOS Terminal
+# Carbonyl ❤️ Terminal
 
 ![Carbonyl Terminal on Windows](https://github.com/niutech/carbonyl-terminal/assets/384997/88bb7289-1d34-4664-b574-5f1707549fba)
 
-Carbonyl Terminal is the portable [Windows Terminal](https://github.com/microsoft/terminal) distribution preconfigured to use Carbonyl browser in the Docker container in the cloud, in order to accelerate web browsing on a slow network connection.
+Carbonyl Terminal is the portable [Windows Terminal](https://github.com/microsoft/terminal) distribution preconfigured to use [Carbonyl](https://github.com/fathyb/carbonyl) browser in the Docker container in the cloud, in order to accelerate web browsing on a slow network connection.
 
-It also works in any modern terminal emulator on Linux/MacOS.
+It also works in any terminal emulator on Linux/MacOS/UNIX.
 
 **Carbonyl Terminal** ⟵ssh/mosh⟶ **Carbonyl Terminal Docker Container** ⟵https⟶ **Internet**
 
-Carbonyl Terminal uses [mosh](https://mosh.org/) for better responsiveness, with compressed SSH as a fallback.
+Carbonyl Terminal uses [mosh](https://mosh.org/) for better responsiveness, with compressed SSH as a fallback. It also provides tabs using tmux.
 
 Carbonyl Terminal Docker Container bundles Carbonyl browser, tmux, mosh and SSH server with public key authentication.
 
