@@ -29,6 +29,10 @@ The server with Carbonyl Terminal Docker Container must have open TCP port 2222 
 
 ## Usage
 
+#### NEW: Web client
+
+You can try the [**Carbonyl Terminal web client demo**](https://niutech.github.io/carbonyl-terminal/) using [ttyd](https://github.com/tsl0922/ttyd) with 15 minutes of time limit per session.
+
 #### Windows client
 
 [Download](https://github.com/niutech/carbonyl-terminal/releases) the latest release of Carbonyl Terminal, extract it and modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.bat` or leave it as is to use the demo server. Then run `CarbonylTerminal.exe`, which automatically connects to your Carbonyl instance by running `carbonyl.bat` in the new tab.
