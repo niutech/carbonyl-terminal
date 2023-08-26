@@ -31,7 +31,7 @@ The server with Carbonyl Terminal Docker Container must have open TCP port 2222 
 
 #### NEW: Web client
 
-You can try the [**Carbonyl Terminal web client demo**](https://niutech.github.io/carbonyl-terminal/) using [ttyd](https://github.com/tsl0922/ttyd) with 15 minutes of time limit per session.
+You can try the [**Carbonyl Terminal web client demo**](https://niutech.github.io/carbonyl-terminal/) using [ttyd](https://github.com/tsl0922/ttyd) with 15 minutes of time limit per session. Keep in mind that the web client requires more bandwidth than the mosh/ssh client because it does not use efficient compression.
 
 #### Windows client
 
