@@ -2,9 +2,7 @@
 
 ![Carbonyl Terminal on Windows](https://github.com/niutech/carbonyl-terminal/assets/384997/88bb7289-1d34-4664-b574-5f1707549fba)
 
-Carbonyl Terminal is the portable [Windows Terminal](https://github.com/microsoft/terminal) distribution preconfigured to use [Carbonyl](https://github.com/fathyb/carbonyl) browser in the Docker container in the cloud, in order to accelerate web browsing on a slow network connection.
-
-It also works in any terminal emulator on Linux/MacOS/UNIX.
+Carbonyl Terminal is a lightweight cross-platform client for [Carbonyl](https://github.com/fathyb/carbonyl) browser in the Docker container in the cloud, used to accelerate web browsing on slow network connections or low memory devices. It works in any terminal emulator on Linux/MacOS/UNIX, as well as Windows Terminal.
 
 **Carbonyl Terminal** ⟵ssh/mosh⟶ **Carbonyl Terminal Docker Container** ⟵https⟶ **Internet**
 
@@ -18,9 +16,11 @@ You can install Carbonyl Terminal Docker Conatiner on your VPS in the cloud or u
 
 First, run Carbonyl Terminal Docker Container on your cloud VPS, e.g. yourserver.com:
 
-```
+```sh
 git clone https://github.com/niutech/carbonyl-terminal
 cd carbonyl-terminal
+docker compose up
+# OR:
 docker build -t carbonyl-terminal .
 docker run -d -p 2222:22 -p 60000-60100:60000-60100/udp --dns 94.140.14.14 --dns 94.140.15.15 --name carbonyl carbonyl-terminal
 ```
@@ -35,7 +35,7 @@ You can try the [**Carbonyl Terminal web client demo**](https://niutech.github.i
 
 #### Windows client
 
-[Download](https://github.com/niutech/carbonyl-terminal/releases) the latest release of Carbonyl Terminal, extract it and modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.bat` or leave it as is to use the demo server. Then run `CarbonylTerminal.exe`, which automatically connects to your Carbonyl instance by running `carbonyl.bat` in the new tab.
+On Windows, Carbonyl Terminal is the portable [Windows Terminal](https://github.com/microsoft/terminal) distribution preconfigured to connect to Carbony Terminal Docker container. [Download](https://github.com/niutech/carbonyl-terminal/releases) the latest release of Carbonyl Terminal, extract it and modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.bat` or leave it as is to use the demo server. Then run `CarbonylTerminal.exe`, which automatically connects to your Carbonyl instance by running `carbonyl.bat` in the new tab.
 
 If you want to use mosh on Windows, you have to first install it in [WSL](https://learn.microsoft.com/en-us/windows/wsl/). Don't forget to copy the `carbonyl_rsa` auth key to `~/.ssh/` and set the appropriate permissions:
 
@@ -46,7 +46,7 @@ cp carbonyl_rsa ~/.ssh/ && chmod 600 ~/.ssh/carbonyl_rsa
 
 #### Linux/MacOS client
 
-Clone the repo to `~/carbonyl-terminal/`, go to `~/carbonyl-terminal/linux/` directory, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.sh` or leave it as is to use the demo server. Then run `carbonyl.sh` in your favorite terminal emulator.
+On Un*x, c lone the repo to `~/carbonyl-terminal/`, go to `~/carbonyl-terminal/linux/` directory, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.sh` or leave it as is to use the demo server. Then run `carbonyl.sh` in your favorite terminal emulator.
 
 ![Carbonyl Terminal on Linux](https://github.com/niutech/carbonyl-terminal/assets/384997/034826e7-81bc-4a22-b1cb-c142239f2c55)
 
