@@ -31,22 +31,22 @@ The server with Carbonyl Terminal Docker Container must have open TCP port 2222 
 
 #### NEW: Web client
 
-You can try the [**Carbonyl Terminal web client demo**](https://niutech.github.io/carbonyl-terminal/) using [ttyd](https://github.com/tsl0922/ttyd) with 15 minutes of time limit per session. Keep in mind that the web client requires more bandwidth than the mosh/ssh client because it does not use efficient compression.
+You can try the [**Carbonyl Terminal web client demo**](https://niutech.github.io/carbonyl-terminal/) using [ttyd](https://github.com/tsl0922/ttyd) with 15 minutes of time limit per session. Keep in mind that the web client requires more bandwidth than the mosh/ssh client because it does not use efficient compression unlike mosh/ssh.
 
 #### Windows client
 
-On Windows, Carbonyl Terminal is the portable [Windows Terminal](https://github.com/microsoft/terminal) distribution preconfigured to connect to Carbony Terminal Docker container. [Download](https://github.com/niutech/carbonyl-terminal/releases) the latest release of Carbonyl Terminal, extract it and modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.bat` or leave it as is to use the demo server. Then run `CarbonylTerminal.exe`, which automatically connects to your Carbonyl instance by running `carbonyl.bat` in the new tab.
+On Windows, Carbonyl Terminal provides the portable [Windows Terminal](https://github.com/microsoft/terminal) distribution preconfigured to connect to Carbony Terminal Docker container. [Download](https://github.com/niutech/carbonyl-terminal/releases) the latest release of Carbonyl Terminal, extract it and modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.bat` or leave it as is to use the demo server. Then run `CarbonylTerminal.exe`, which automatically connects to your Carbonyl instance by running `carbonyl.bat` in the new tab.
 
 If you want to use mosh on Windows, you have to first install it in [WSL](https://learn.microsoft.com/en-us/windows/wsl/). Don't forget to copy the `carbonyl_rsa` auth key to `~/.ssh/` and set the appropriate permissions:
 
-```
+```sh
 sudo apt install mosh
 cp carbonyl_rsa ~/.ssh/ && chmod 600 ~/.ssh/carbonyl_rsa
 ```
 
 #### Linux/MacOS client
 
-On Un*x, c lone the repo to `~/carbonyl-terminal/`, go to `~/carbonyl-terminal/linux/` directory, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.sh` or leave it as is to use the demo server. Then run `carbonyl.sh` in your favorite terminal emulator.
+On Un*x, clone the repo, go to `/linux/` directory, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.sh` or leave it as is to use the demo server. Then run `carbonyl.sh` in your favorite terminal emulator.
 
 ![Carbonyl Terminal on Linux](https://github.com/niutech/carbonyl-terminal/assets/384997/034826e7-81bc-4a22-b1cb-c142239f2c55)
 
