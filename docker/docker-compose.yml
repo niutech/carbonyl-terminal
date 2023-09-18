@@ -1,6 +1,8 @@
 version: '3.3'
 services:
     carbonyl-terminal:
+        build: .
+        image: carbonyl-terminal
         ports:
             - '2222:22'
             - '60000-60100:60000-60100/udp'
@@ -8,4 +10,3 @@ services:
             - 94.140.14.14
             - 94.140.15.15
         container_name: carbonyl
-        image: carbonyl-terminal
