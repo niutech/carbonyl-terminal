@@ -18,7 +18,7 @@ First, run Carbonyl Terminal Docker Container on your cloud VPS, e.g. yourserver
 
 ```sh
 git clone https://github.com/niutech/carbonyl-terminal
-cd carbonyl-terminal
+cd carbonyl-terminal/docker/
 docker compose up
 # OR:
 docker build -t carbonyl-terminal .
@@ -46,7 +46,7 @@ cp carbonyl_rsa ~/.ssh/ && chmod 600 ~/.ssh/carbonyl_rsa
 
 #### Linux/MacOS client
 
-On Un*x, clone the repo, go to `/linux/` directory, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.sh` or leave it as is to use the demo server. Then run `carbonyl.sh` in your favorite terminal emulator.
+On Un*x, clone the repo, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.sh` or leave it as is to use the demo server. Then run `carbonyl.sh` in your favorite terminal emulator.
 
 ![Carbonyl Terminal on Linux](https://github.com/niutech/carbonyl-terminal/assets/384997/034826e7-81bc-4a22-b1cb-c142239f2c55)
 
