@@ -35,7 +35,9 @@ You can try the [**Carbonyl Terminal web client demo**](https://niutech.github.i
 
 #### Windows client
 
-On Windows, Carbonyl Terminal provides the portable [Windows Terminal](https://github.com/microsoft/terminal) distribution preconfigured to connect to Carbony Terminal Docker container. [Download](https://github.com/niutech/carbonyl-terminal/releases) the latest release of Carbonyl Terminal, extract it and modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.bat` or leave it as is to use the demo server. Then run `CarbonylTerminal.exe`, which automatically connects to your Carbonyl instance by running `carbonyl.bat` in the new tab.
+On Windows, you can use Carbonyl Terminal using the provided [PuTTY Portable](https://portableapps.com/apps/internet/putty_portable) distribution preconfigured to connect to Carbony Terminal Docker container. [Download](https://github.com/niutech/carbonyl-terminal/releases) the latest release of Carbonyl Terminal Portable for Windows x86, extract it and run `CarbonylTerminalPortable.exe` to connect to the demo server. If you want to use your own server, close the app, edit the file `Carbonyl Terminal Portable\Data\settings\putty.reg` and replace the value of key `"HostName"` to `yourserver.com`, then save it and re-run the app.
+
+Another way is to download the [`carbonyl.bat`](https://github.com/niutech/carbonyl-terminal/raw/main/carbonyl.bat) script and run it in the command prompt, using the OpenSSH client.
 
 If you want to use mosh on Windows, you have to first install it in [WSL](https://learn.microsoft.com/en-us/windows/wsl/). Don't forget to copy the `carbonyl_rsa` auth key to `~/.ssh/` and set the appropriate permissions:
 
@@ -46,7 +48,7 @@ cp carbonyl_rsa ~/.ssh/ && chmod 600 ~/.ssh/carbonyl_rsa
 
 #### Linux/MacOS client
 
-On Un*x, clone the repo, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in `carbonyl.sh` or leave it as is to use the demo server. Then run `carbonyl.sh` in your favorite terminal emulator.
+On Un*x, download the [`carbonyl.sh`](https://github.com/niutech/carbonyl-terminal/raw/main/carbonyl.sh) script, modify the `USER_HOST` variable to `carbonyl@yourserver.com` in it or leave it as is to use the demo server. Then set it as executable and run `./carbonyl.sh` in your favorite terminal emulator.
 
 ![Carbonyl Terminal on Linux](https://github.com/niutech/carbonyl-terminal/assets/384997/034826e7-81bc-4a22-b1cb-c142239f2c55)
 
