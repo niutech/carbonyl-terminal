@@ -55,4 +55,4 @@ On Un*x, just download the [`carbonyl.sh`](https://github.com/niutech/carbonyl-t
 
 ## License
 
-© 2023 Jerzy Głowacki under MIT License.
+© 2024 Jerzy Głowacki under MIT License.
